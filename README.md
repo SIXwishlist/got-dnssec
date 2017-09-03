@@ -25,7 +25,8 @@ Type of broken DNSSEC
 
  1) Single host record with broken key.
  2) Host record which *should not* exist but does
-    ([called DNS NXDOMAIN hijacking](https://en.wikipedia.org/wiki/DNS_hijacking#Manipulation_by_ISPs)).
+    ([called DNS NXDOMAIN hijacking](https://en.wikipedia.org/wiki/DNS_hijacking#Manipulation_by_ISPs),
+    see also "[What is a NXDOMAIN](https://www.dnsknowledge.com/whatis/nxdomain-non-existent-domain-2/)").
  3) Subdomain which has *wrong* key.
  4) Subdomain which *should* have a key but doesn't.
 
