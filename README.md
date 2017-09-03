@@ -5,6 +5,31 @@ DNSSEC.
 
 The original site can be found at http://got-dnssec.me/
 
+What is DNSSEC
+=========================================================================
+
+[Domain Name System Security Extensions (DNSSEC)](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)
+is a suite of extensions that add security to the Domain Name System (DNS)
+protocol by enabling DNS responses to be validated. Specifically, DNSSEC
+provides origin authority, data integrity, and authenticated denial of
+existence.
+
+Why is DNSSEC important?
+=========================================================================
+
+FIXME: Put details.
+
+
+Type of broken DNSSEC
+=========================================================================
+
+ 1) Single host record with broken key.
+ 2) Host record which *should not* exist but does
+    ([called DNS NXDOMAIN hijacking](https://en.wikipedia.org/wiki/DNS_hijacking#Manipulation_by_ISPs)).
+ 3) Subdomain which has *wrong* key.
+ 4) Subdomain which *should* have a key but doesn't.
+
+
 License
 =========================================================================
 All code is licensed under Apache License Version 2.0, see the LICENSE
