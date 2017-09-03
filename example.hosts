@@ -1,18 +1,21 @@
-ipv6only.me
 $ttl 38400
-ipv6only.me.	IN	SOA	ipv6only.me. mithro.mithis.net. (
-			1066000068
-			10800
-			3600
-			604800
-			38400 )
-ipv6only.me.		IN	NS	ns1
-ipv6only.me.		IN	NS	ns2
-ipv6only.me.		IN	NS	ns3
+got-dnssec.me.  IN      SOA     ns1.got-dnssec.me. mithro.mithis.com. (
+        1474613733      ; serial - EPOCH in seconds
+        1h              ; slave refresh interval
+        15m             ; slave retry interval
+        1w              ; slave copy expire time
+        1h              ; NXDOMAIN cache time
+        )
 
-ns1			IN	AAAA	2001:4dd0:fd68:1::1
-ns2			IN	AAAA	2607:fe70:0:3::b
-ns3			IN	AAAA	2607:fe70:0:4::b
+got-dnssec.me.          IN      NS      ns1
+got-dnssec.me.          IN      NS      ns2
+got-dnssec.me.          IN      NS      ns3
 
-ipv6only.me.		IN	AAAA    2001:4dd0:fd68:2::1
-*			IN	CNAME	ipv6only.me.
+ns1                     IN      A       5.9.126.91
+ns2                     IN      A       208.79.240.3
+ns3                     IN      A       208.79.241.3
+
+got-dnssec.me.          IN      A       5.9.126.92
+
+bogus                   IN      A       5.9.126.92
+bogus                   IN      TXT     "This host has a deliberately borked dnssec setup (use to detect if dnssec is enabled)."
