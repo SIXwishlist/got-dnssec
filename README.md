@@ -3,7 +3,7 @@ About
 A website designed to allow web apps to figure out if a person as working
 DNSSEC.
 
-The original site can be found at http://got-dnssec.me/
+The original site can be found at https://got-dnssec.me/
 
 What is DNSSEC
 =========================================================================
