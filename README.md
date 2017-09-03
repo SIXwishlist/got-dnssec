@@ -1,9 +1,9 @@
 About
 =========================================================================
-A website designed to allow web apps to figure out if a person as IPv6
-connectivity, and that their IP address is.
+A website designed to allow web apps to figure out if a person as working
+DNSSEC.
 
-The original site can be found at http://ipv6only.me/
+The original site can be found at http://got-dnssec.me/
 
 License
 =========================================================================
@@ -12,21 +12,20 @@ file for more details.
 
 Set Up
 =========================================================================
-Setting up your own copy of ipv6only.me is relatively simple.
+Setting up your own copy of got-dnssec.me is a bit tricky as you have to setup
+delibrarely broken DNSSEC records which most DNS Servers try to prevent you
+from doing.
 
-Step 1 - Create an IPv6 only DNS name. It should *only* have AAAA
-         records.
 
-The ipv6only.me domain is complete IPv6 only, it doesn't even use IPv4 for
-DNS resolution (see the include example.hosts file). This makes sure that
-every part in the user's pipeline is correctly IPv6 enabled. I highly
-recommend this is you want to be absolutely certain their IPv6 setup
-is complete.
+Step 1 - Create a domain which has DNSSEC enabled.
 
-Step 2 - Deploy the application to Apache (with PHP installed) at the
-         root directory of your new IPv6 website.
+Step 2 - Create a subdomain.
 
-Step 3 - (Optional) If you want to see who ends up at your website
+Step 3 - Delegate a key to the sub domain (using DS records).
+
+Step 4 - Publish subdomain with the *wrong* DNSSEC key.
+
+Step X - (Optional) If you want to see who ends up at your website
 	 enable Google Analytics by creating a PHP file with the
          following contents;
 
@@ -35,8 +34,8 @@ Step 3 - (Optional) If you want to see who ends up at your website
 $analytics = 'YOUR UA ID GOES HERE';
 ```
 
-Step 4 - Test it all works!
+Step 5 - Test it all works!
 
 Credits 
 =========================================================================
-Developed by Tim 'mithro' Ansell - http://blog.mithis.com/
+Developed by Tim 'mithro' Ansell - http://blog.mithis.net/
